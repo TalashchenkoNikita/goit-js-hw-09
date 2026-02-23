@@ -75,6 +75,10 @@
     line-height: 1.5;
 }
 
+textarea {
+  resize: none;
+}
+
 button {
     align-self: flex-start;
     margin-top: 8px;
