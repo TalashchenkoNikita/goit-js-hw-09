@@ -18,6 +18,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-style: "Montserrat", sans-serif;
   display: flex;
