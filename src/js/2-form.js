@@ -9,14 +9,16 @@ form.elements.email.value = formData.email;
 form.elements.message.value = formData.message;
 
 form.addEventListener("input", ({target}) => {
-    formData[target.name] = target.value.trim();
+    formData[target.name] = target.value;
     localStorage.setItem(localStorageKey, JSON.stringify(formData));
 }); 
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (formData.email && formData.message) {
-    console.log(formData);
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
+  if (email && message) {
+    console.log({email, message});
     localStorage.removeItem(localStorageKey);
     form.reset();
     formData.email = "";
