@@ -21,8 +21,6 @@ form.addEventListener("submit", (e) => {
     console.log({email, message});
     localStorage.removeItem(localStorageKey);
     form.reset();
-    formData.email = "";
-    formData.message = "";
   } else {
     alert('Fill please all fields');
   }
